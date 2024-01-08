@@ -1,0 +1,25 @@
+.form-group{
+    padding-left: 40px;
+}
+input{
+    padding: 5px;
+    border: solid;
+    font-style: italic;
+    background-color: rgb(238, 148, 238);
+}
+#form{
+    font-style: italic;
+    background:linear-gradient(to bottom right,rgb(233, 100, 122),violet);
+    display: inline-block; 
+    margin-left: 7.1cm;
+}
+h1{
+   text-align: center;
+    font-style: italic;
+    color: red;
+    
+}
+button{
+    background-color: brown;
+    
+}

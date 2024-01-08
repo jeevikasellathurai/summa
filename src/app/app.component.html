@@ -1,0 +1,108 @@
+<h1>Contact Form</h1>
+<form id="form" #contactForm="ngForm" (submit)="Onsubmit(contactForm)" ngNativeValidate>
+  <div>
+    <label><b>Name : </b></label>
+    <input type="text" name="name" [(ngModel)]="defaultValues.name" required>
+  </div><br><br>
+
+  <div>
+    <label><b>Age : </b></label>
+    <input type="number" name="age" [(ngModel)]="defaultValues.age" required>
+  </div><br><br>
+
+  <div id="radiocolor ">
+    <label><b>Gender : </b></label>
+    <input type="radio" name="gender" value="male" [(ngModel)]="defaultValues.gender" required> Male
+    <input type="radio" name="gender" value="female" [(ngModel)]="defaultValues.gender" required> Female
+  </div><br><br>
+
+  <div>
+    <label><b>Country : </b></label>
+    <select name="country" [(ngModel)]="defaultValues.country">
+      <option value="" >Select</option>
+      <option *ngFor="let c of countries" value="{{c.id}}">{{c.name}}</option>
+    </select>
+  </div><br><br>
+
+  <div ngModelGroup="address">
+    <label><b>Address </b></label><br><br>
+
+    <div class="form-group">
+      <label for="street"><b>Street : </b></label>
+      <input type="text" name="street" placeholder="Enter street address" [(ngModel)]="defaultValues.address.street" required>
+    </div><br>
+
+    <div class="form-group">
+      <label for="city"><b>City : </b></label>
+      <input type="text" name="city" placeholder="Enter city" [(ngModel)]="defaultValues.address.city" required>
+    </div><br>
+
+    <div class="form-group">
+      <label for="pincode"><b>Pin Code : </b></label>
+      <input type="text" name="pincode" placeholder="Enter pin code" [(ngModel)]="defaultValues.address.pincode" required>
+    </div><br>
+  </div>
+
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+
+<!-- <div class="container mt-5">
+  <h1>Contact Form</h1>
+  <form id="form" #contactForm="ngForm" (submit)="Onsubmit(contactForm)" ngNativeValidate>
+    <div class="form-group">
+      <label for="name"><b>Name:</b></label>
+      <input type="text" class="form-control" name="name" [(ngModel)]="defaultValues.name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="age"><b>Age:</b></label>
+      <input type="number" class="form-control" name="age" [(ngModel)]="defaultValues.age" required>
+    </div>
+
+    <div class="form-group" id="radiocolor">
+      <label><b>Gender:</b></label>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" name="gender" value="male" [(ngModel)]="defaultValues.gender" required>
+        <label class="form-check-label">Male</label>
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" name="gender" value="female" [(ngModel)]="defaultValues.gender" required>
+        <label class="form-check-label">Female</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="country"><b>Country:</b></label>
+      <select class="form-control" name="country" [(ngModel)]="defaultValues.country">
+        <option value="">Select</option>
+        <option *ngFor="let c of countries" [value]="c.id">{{c.name}}</option>
+      </select>
+    </div>
+
+    <div ngModelGroup="address">
+      <label><b>Address:</b></label>
+
+      <div class="form-group">
+        <label for="street"><b>Street:</b></label>
+        <input type="text" class="form-control" name="street" placeholder="Enter street address" [(ngModel)]="defaultValues.address.street" required>
+      </div>
+
+      <div class="form-group">
+        <label for="city"><b>City:</b></label>
+        <input type="text" class="form-control" name="city" placeholder="Enter city" [(ngModel)]="defaultValues.address.city" required>
+      </div>
+
+      <div class="form-group">
+        <label for="pincode"><b>Pin Code:</b></label>
+        <input type="text" class="form-control" name="pincode" placeholder="Enter pin code" [(ngModel)]="defaultValues.address.pincode" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div> -->
+
